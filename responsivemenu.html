@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+
+    <style>
+        *{
+            margin: 0;
+        }
+        .menu{
+           width: 100%;
+           height:40px;
+            background: rgb(10, 10, 10);
+            
+
+        }
+         .bar1, .bar2 ,.bar3 {
+             width: 35px;
+             height: 5px;
+             background: rgb(221, 218, 218);
+             margin: 6px;
+             transition: 0.5s;
+             display: none;
+         }
+         .menu:hover{
+             background: black;
+         }
+         
+       .bar4 ,.bar5{
+           background: white;
+           width: 35px;
+           height: 5px;
+        
+       }
+       .bar4{
+           transform:rotate(45deg);
+
+       }
+       .bar5{
+           transform: rotate(-45deg);
+       }
+
+        
+      
+         .c{
+             display: flex;
+             background:#dbdce2;
+           flex-direction: column;
+          padding: 10px;
+          justify-content: center;
+          border-bottom:1px solid black;
+          
+         }
+         
+         a{
+             text-decoration: none;
+             color: rgb(221, 218, 218);
+         }
+         li{
+             list-style: none;
+             padding: 9px;
+         }
+         
+         
+         .photo{
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             
+         }
+         .img{
+             display: flex;
+             flex-direction: row;
+            justify-content: space-between;
+            margin:40px;
+            padding: 10px;
+            flex-wrap: wrap;
+            }
+            .foot{
+                background: black;
+                border-top:2px solid white ;
+            }
+
+            .foot{
+                background-color: rgb(15, 14, 14);
+                min-height: 100px;
+                width: 100%;
+                margin-top: 20px;
+              display: flex;
+              justify-content: space-between;
+              padding: 20px;
+            }
+            .realf{
+                background:rgba(15, 14, 14,0.7);
+                min-height: 50px;
+                width: 100%;
+                
+            }
+        
+
+            @media (max-width:500px) {
+           .bar1 ,.bar2 ,.bar3{
+               display: block;
+           }
+           .nav{
+                    display:none;
+                }
+                
+                .menu{
+                    display: inline-block;
+                }
+            }
+            @media (min-width:500px) {
+                .menu{
+                    background-color: rgb(15, 14, 14);
+                    height: 60px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                }
+                
+                .nav{
+                    color: rgb(221, 218, 218);
+                }
+            }
+            hr{
+                border: 2px solid black;
+                
+            }
+            .dd{
+                
+                height: 100%;
+               width: 0;
+               position: fixed;
+               z-index: 1;
+                top: 0;
+               left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+            .flose .dd{
+               width: 0%;
+            }
+    </style>
+</head>
+<body>
+    <div class="menu" >
+        <div id="de" onclick="alert('hello'); open();"><div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div> </div>
+        <div class="nav"> <a href=""> HOME</a></div>
+        <DIV class="nav"> <a href=""> PRODUCTS </a></DIV>
+        <DIV class="nav"> <a href=""> CONTACTS </a> </DIV>
+        <div class="dd" id="dd">
+           <div onclick="close()"> 
+            <div class="bar4"></div>
+            <div class="bar5"></div>
+        </div>
+            <h1> <a href=""> Home</a></h1>
+            <h1> <a href=""> Project </a></h1>
+            <h1><a href="">About us</a> </h1>
+           
+        </div>
+    </div>
+     <div class="c" id="c">
+
+        <h1 class="me"> REDMI   Note10 pro max</h1>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, repellat? Ipsam facere non ullam accusantium eaque placeat sit nobis fugiat nemo expedita vel quod, cumque assumenda enim tempora consequatur minima exercitationem alias hic laboriosam.</p>
+     </div>
+
+     <div class="photo">
+          <div> <h1>Features</h1>
+        <hr></div>
+          <div class="img"> <div> <img src="./images.jpeg" alt="this is photo"></div>
+        <div><img src="./images (1).jpeg" alt="this is also a photo"></div>
+        <div> <img src="./images (2).jpeg" alt="this is also aphoto">  </div>
+        </div>
+
+
+        <footer class="foot">
+
+            <div class="links"> 
+                <ul>
+                    <li><a href=""> contact us</a></li>
+                    <li><a href="">products</a></li>
+                    <li><a href="">accessories</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a href=""> <img src="" alt="insta"></a></li>
+                    <li><a href=""><img src="" alt="fb"></a></li>
+                    <li><a href=""><img src="" alt="yt"></a></li>
+                </ul>
+            </div>
+            &times;
+            &times;&times;&times;
+        </footer>
+        <footer class="realf"> <p><center> this website just for educational purpose</center></p></footer>
+     </div>
+    <script>
+
+        function open(){
+            alert('hello');
+             document.getElementById("de").style.width = "250px";
+             document.getElementById("c").style.marginLeft = "250px";
+
+        }
+        function close(){
+           
+            document.getElementById("dd").style.width = "0px";
+             document.getElementById("c").style.marginLeft = "0px";
+        }
+    </script>
+</body>
+</html>
